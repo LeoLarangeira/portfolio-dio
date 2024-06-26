@@ -1,0 +1,78 @@
+.acordeon{
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+    margin: 1rem 0;
+    
+    border: 1px solid white;
+    border-radius: 1rem;
+
+    transition: 1.5s;
+}
+
+.acordeon.open,.acordeon:hover{
+    background-color: #55569E;
+    border-color: #55569E;
+}
+
+
+
+
+.acordeon .trigger{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    font-size: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    
+    
+    padding: 1rem 2rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.acordeon .trigger::after{
+    content: "";
+    
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/icons/up-chevron.png');
+    transition: .65s;
+}
+
+.acordeon .trigger::hover{
+    cursor: pointer;
+}
+
+
+
+.acordeon.open .trigger::after{
+    transform: rotate(180deg);
+}
+
+
+.acordeon .content{
+    height: 0; 
+    
+    
+    opacity: 0;
+    overflow: hidden;
+    transition:opacity 1s ease-in-out ;
+}
+
+
+.acordeon.open .content{
+    display: block;
+    padding: 0  1rem 1rem 2rem;
+    height: auto;
+    opacity: 1;
+}

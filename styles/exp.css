@@ -1,0 +1,26 @@
+.experience .title{
+    font-weight: 700;
+    font-size: 1.80rem;
+
+}
+
+
+.experience .date{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.experience .date::before{
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 1rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('/assets/icons8-date-50.png');
+}
